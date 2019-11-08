@@ -21,29 +21,29 @@
         <label for="pizzaSize">Please select your size!</label>
         <select id="pizzaSize">
           <option></option>
-          <option value="1">Personal</option>
-          <option value="2">Medium</option>
-          <option value="3">Large</option>
-          <option value="4">Legacy Edition</option>
+          <option value="10">Personal</option>
+          <option value="20">Medium</option>
+          <option value="30">Large</option>
+          <option value="100">Legacy Edition</option>
         </select>
-        <div id="pizzaToppings">
-          <h3>List your desired toppings:</h3>
-          <input type="checkbox" name="Toppings" value="1">Cheese<br>
-          <input type="checkbox" name="Toppings" value="1">Pepperoni<br>
-          <input type="checkbox" name="Toppings" value="1">PineApple<br>
-          <input type="checkbox" name="Toppings" value="1">Onion<br>
-          <input type="checkbox" name="Toppings" value="1">Spinach<br>
-          <input type="checkbox" name="Toppings" value="1">Olives<br>
-          <input type="checkbox" name="Toppings" value="3">Canadian Bacon<br>
-          <input type="checkbox" name="Toppings" value="3">Meatballs<br>
-          <input type="checkbox" name="Toppings" value="3">Garlic<br>
-          <input type="checkbox" name="Toppings" value="5">Caviar<br>
-          <input type="checkbox" name="Toppings" value="5">Pistachio<br>
-          <input type="checkbox" name="Toppings" value="5">Corn<br>
-          <input type="checkbox" name="Toppings" value="20">Legacy Edition  <em>Mystery</em><br>
-        </div>
-        <button type="submit">Calculate your price!</button>
       </div>
+      <div class="inputs">
+        <label for="pizzaToppings">Please select your size!</label>
+        <select id="pizzaToppings">
+          <option></option>
+          <option value="10">Pepperoni</option>
+          <option value="20">Canadian Bacon and Pineapples</option>
+          <option value="30">Meatlover's</option>
+          <option value="100">Legacy Edition, mystery toppings</option>
+        </select>
+      </div>
+      <div class="agePortion">
+        <label for="age">Enter your age</label>
+        <input id="age" type="text">
+      </div>
+      <button type="submit">Calculate your price!</button>
     </form>
+    <p id="results">
+    </p>
   </body>
 </html>
