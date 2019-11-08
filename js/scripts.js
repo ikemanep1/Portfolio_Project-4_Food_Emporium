@@ -89,7 +89,6 @@ $(document).ready(function(){
   pizzaTotal.addAge();
   pizzaTotal.addToppings();
   pizzaTotal.pizzaPrice();
-
-  $("p#results").text("Thank you for ordering! Your pizza is on the way, please pay "+ this.pizzaOutcome + ".00$");
+  $("p#results").text("Thank you for ordering! Your pizza is on the way, please pay "+ pizzaTotal.pizzaOutcome + ".00$");
   });
 });
