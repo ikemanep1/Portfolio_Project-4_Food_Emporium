@@ -6,50 +6,44 @@ function Order(size, topping, age) {
 }
 
 Order.prototype.addSize = function() {
-  var sizeOutput = 50;
-  if (this.size = 10) {
+  var sizeOutput = 0;
+  if (this.size.includes("Personal")) {
     sizeOutput += 10;
   };
-  if (this.size = 20) {
+  if (this.size.includes("Medium")) {
     sizeOutput += 20;
   };
-  if (this.size = 30) {
+  if (this.size.includes("Large")) {
     sizeOutput += 30;
   };
-  if (this.size = 100) {
+  if (this.size.includes("Legacy Edition")) {
     sizeOutput += 100;
-  };
-  if (this.size = NaN) {
-    alert("please enter your desired pizza size")
   };
   this.sizeOutput = sizeOutput;
   console.log(sizeOutput);
 };
 
 Order.prototype.addToppings = function() {
-  var toppingsOutput = 50;
-  if (this.topping = 10) {
+  var toppingsOutput = 0;
+  if (this.topping.includes("Pepperoni")) {
     toppingsOutput += 10;
   };
-  if (this.topping = 20) {
-    toppingsOutput += 20;
+  if (this.topping.includes("Canadian")) {
+  toppingsOutput += 20;
   };
-  if (this.topping = 30) {
-    toppingsOutput += 30;
+  if (this.topping.includes("Meatlover")) {
+  toppingsOutput += 30;
   };
-  if (this.topping = 100) {
-    toppingsOutput += 100;
-  };
-  if (this.topping = NaN) {
-    alert("please enter your desired toppings")
+  if (this.topping.includes("Legacy Edition")) {
+  toppingsOutput += 100;
   };
   this.toppingsOutput = toppingsOutput;
   console.log(toppingsOutput);
 };
 
 Order.prototype.addAge = function() {
-  var ageOutput = 50;
-  if (this.age <=18) {
+  var ageOutput = 0;
+  if (this.age <=18 && this.age >= 1) {
     ageOutput -=50
   };
   if (this.age >18 && this.age <=50) {
@@ -61,9 +55,6 @@ Order.prototype.addAge = function() {
   if (this.age >99) {
     ageOutput +=100
   };
-  if (this.age = NaN) {
-   alert("please enter your age")
- };
   this.ageOutput = ageOutput;
   console.log(ageOutput);
 };
@@ -81,8 +72,8 @@ Order.prototype.pizzaPrice = function() {
 $(document).ready(function(){
   $("#pizzaInputs").submit(function(event){
     event.preventDefault();
-  var size = parseInt($("select#pizzaSize").val());
-  var topping = parseInt($("select#pizzaToppings").val());
+  var size = $("select#pizzaSize").val();
+  var topping = $("select#pizzaToppings").val();
   var age = parseInt($("input#age").val());
   var pizzaTotal = new Order(size, topping, age)
   pizzaTotal.addSize();
