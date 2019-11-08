@@ -5,69 +5,74 @@ function Order(size, topping, age) {
   this.age = age;
 }
 
-Order.prototype.sizeOutput = function() {
+Order.prototype.addSize = function() {
   var sizeOutput = 50;
-  if (this.size.includes(10)) {
+  if (this.size = 10) {
     sizeOutput += 10;
-  }
-  if (this.size.includes(20)) {
+  };
+  if (this.size = 20) {
     sizeOutput += 20;
-  }
-  if (this.size.includes(30)) {
+  };
+  if (this.size = 30) {
     sizeOutput += 30;
-  }
-  if (this.size.includes(100)) {
+  };
+  if (this.size = 100) {
     sizeOutput += 100;
-  }
-  else {
+  };
+  if (this.size = NaN) {
     alert("please enter your desired pizza size")
-  }
+  };
   this.sizeOutput = sizeOutput;
-}
-
-Order.prototype.toppingsOutput = function() {
-  var toppingsOutput = 50;
-  if (this.topping.includes(10)) {
-    toppingsOutput += 10;
-  }
-  if (this.topping.includes(20)) {
-    toppingsOutput += 20;
-  }
-  if (this.topping.includes(30)) {
-    toppingsOutput += 30;
-  }
-  if (this.topping.includes(100)) {
-    toppingsOutput += 100;
-  }
-  else {
-    alert("please enter your desired toppings")
-  }
-  this.toppingsOutput = toppingsOutput;
+  console.log(sizeOutput);
 };
 
-Order.prototype.ageOutput = function() {
+Order.prototype.addToppings = function() {
+  var toppingsOutput = 50;
+  if (this.topping = 10) {
+    toppingsOutput += 10;
+  };
+  if (this.topping = 20) {
+    toppingsOutput += 20;
+  };
+  if (this.topping = 30) {
+    toppingsOutput += 30;
+  };
+  if (this.topping = 100) {
+    toppingsOutput += 100;
+  };
+  if (this.topping = NaN) {
+    alert("please enter your desired toppings")
+  };
+  this.toppingsOutput = toppingsOutput;
+  console.log(toppingsOutput);
+};
+
+Order.prototype.addAge = function() {
   var ageOutput = 50;
   if (this.age <=18) {
     ageOutput -=50
-  }
+  };
   if (this.age >18 && this.age <=50) {
     ageOutput += 30
-  }
+  };
   if (this.age >51 && this.age <=99) {
     ageOutput += 35
-  }
+  };
   if (this.age >99) {
     ageOutput +=100
-  }
-  else {
-    alert("please enter your age")
-  }
+  };
+  if (this.age = NaN) {
+   alert("please enter your age")
+ };
   this.ageOutput = ageOutput;
+  console.log(ageOutput);
 };
 
 Order.prototype.pizzaPrice = function() {
-  var pizzaOutcome = sizeOutput + toppingsOutput + ageOutput;
-}
+  var pizzaOutcome = this.sizeOutput + this.toppingsOutput + this.ageOutput;
+  this.pizzaOutcome = pizzaOutcome
+  console.log(pizzaOutcome);
+};
 
 
 
@@ -77,5 +82,14 @@ $(document).ready(function(){
   $("#pizzaInputs").submit(function(event){
     event.preventDefault();
   var size = parseInt($("select#pizzaSize").val());
-  var toppings = parseInt($("select#pizzaToppings").val());
+  var topping = parseInt($("select#pizzaToppings").val());
   var age = parseInt($("input#age").val());
+  var pizzaTotal = new Order(size, topping, age)
+  pizzaTotal.addSize();
+  pizzaTotal.addAge();
+  pizzaTotal.addToppings();
+  pizzaTotal.pizzaPrice();
+
+  $("p#results").text("Thank you for ordering! Your pizza is on the way, please pay "+ this.pizzaOutcome + ".00$");
+  });
+});
