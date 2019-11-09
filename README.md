@@ -17,14 +17,12 @@ _This is a place for ordering food. It contains options for pizza. The user will
 
 # Known Bugs
 
-_Nothing so far._
+_The alert for empty submissions will not fire, and there's still a ? icon in the URL._
 
 # specs
 | Behavior        | Input           | Outcome  |
 | ------------- |:-------------:| -----:|
-| Customer chooses what they're hungry for. | Clicked form activates. | Sub-topic toggles |
-| Customer inputs desired ingredients. | Front end collects data. | Back end calculates price for ingredient modifiers. |
-| Customer inputs desired size. | Front end collects data. | Back end calculates price for size modifier. |
+| Customer inputs desired ingredients, size, and their age. | Front end collects data, and stores it according to constructor. | Back end calculates price for each modifier. |
 | User submits form. | Program Launches back end logic. | Front end displays result. |
 
 ### Support and contact details

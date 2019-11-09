@@ -1,3 +1,73 @@
+body{
+  background-color: #000066;
+}
+h1{
+  text-align: center;
+  border: 3px solid #ff9900;
+  padding: 4px;
+  color: #ffff1c;
+  background-color: #5a5b4f;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-family: cursive;
+}
+p{
+  text-align: center;
+  border: 3px solid #ff9900;
+  padding: 4px;
+  color: #ffff1c;
+  background-color: #5a5b4f;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-family: cursive;
+}
+h2{
+  text-align: center;
+  border: 3px solid #ff9900;
+  padding: 4px;
+  color: #ffff1c;
+  background-color: #5a5b4f;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-family: cursive;
+}
+.pizzaInterface{
+  text-align: center;
+  border: 3px solid #ff9900;
+  padding: 4px;
+  color: #990000;
+  background-color: #ffff99;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-family: cursive;
+}
+.inputs{
+  text-align: center;
+  padding: 4px;
+  color: #990000;
+  background-color: #ffff99;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-family: cursive;
+}
+agePortion{
+  text-align: center;
+  border: 3px solid #ff9900;
+  padding: 4px;
+  color: #ffff1c;
+  background-color: #5a5b4f;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-family: cursive;
+}
+#age{
+  text-align: center;
+  padding: 4px;
+  color: #990000;
+  margin-left: 150px;
+  margin-right: 150px;
+  font-family: cursive;
+}
 #pizzaResult{
   display: none;
 }
