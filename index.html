@@ -10,40 +10,42 @@
   </head>
   <body>
     <h1>Ike's food Emporium!</h1>
-    <P>Hungry? We got you covered! At Ike's food Emporium, we can make anything you crave, and have it delivered to your doorstep.<P>
+    <P>Hungry? We got you covered! At Ike's food Emporium, we can makeanything   you crave, and have it delivered to your doorstep.<P>
     <h2>How it works:</h2>
     <p>When you fill out and submit our form, we give you an estimated price.
     </p>
-    <p> Our most requested item is pizza! If that's what you're belly's grumbling for, then let's get started! We take special interest in the size and toppings of your pizza.</p>
-    <form id="pizzaInputs">
-      <h3>Pizza!</h3>
-      <div class="inputs">
-        <label for="pizzaSize">Please select your size!</label>
-        <select id="pizzaSize">
-          <option value="blank"></option>
-          <option value="Personal">Personal</option>
-          <option value="Medium">Medium</option>
-          <option value="Large">Large</option>
-          <option value="Legacy Edition">Legacy Edition</option>
-        </select>
-      </div>
-      <div class="inputs">
-        <label for="pizzaToppings">Please select your toppings!</label>
-        <select id="pizzaToppings">
-          <option value="blank"></option>
-          <option value="Pepperoni">Pepperoni</option>
-          <option value="Canadian">Canadian Bacon and Pineapples</option>
-          <option value="Meatlover">Meatlover's</option>
-          <option value="Legacy Edition">Legacy Edition, mystery toppings</option>
-        </select>
-      </div>
-      <div class="agePortion">
-        <label for="age">Enter your age</label>
-        <input id="age" type="text">
-      </div>
-      <button type="submit">Calculate your price!</button>
-    </form>
-    <p id="pizzaResult">Congratulations, your order has now been placed. The order will cost <span id="output"></span>.00$.
-    </p>
+    <p> Our most requested item is pizza! If that's what you're belly's  grumbling for, then let's get started! We take special interest in thesize   and toppings of your pizza.</p>
+    <div class="pizzaInterface">
+      <form id="pizzaInputs">
+        <h3>Pizza!</h3>
+        <div class="inputs">
+          <label for="pizzaSize">Please select your size!</label>
+          <select id="pizzaSize">
+            <option value="blank"></option>
+            <option value="Personal">Personal</option>
+            <option value="Medium">Medium</option>
+            <option value="Large">Large</option>
+            <option value="Legacy Edition">Legacy Edition</option>
+          </select>
+        </div>
+        <div class="inputs">
+          <label for="pizzaToppings">Please select your toppings!</label>
+          <select id="pizzaToppings">
+            <option value="blank"></option>
+            <option value="Pepperoni">Pepperoni</option>
+            <option value="Canadian">Canadian Bacon and Pineapples</option>
+            <option value="Meatlover">Meatlover's</option>
+            <option value="Legacy Edition">Legacy Edition, mystery</option>
+          </select>
+        </div>
+        <div class="agePortion">
+          <label for="age">Enter your age</label>
+          <input id="age" type="text">
+        </div>
+        <button type="submit">Calculate your price!</button>
+      </form>
+      <p id="pizzaResult">Congratulations, your order has now beenplaced. The order will cost <span id="output"></span>.00$.
+      </p>
+    </div>
   </body>
 </html>
