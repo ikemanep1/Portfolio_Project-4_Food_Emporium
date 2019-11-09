@@ -6,7 +6,7 @@ function Order(size, topping, age) {
 }
 
 Order.prototype.addSize = function() {
-  var sizeOutput = 10;
+  var sizeOutput = 0;
   if (this.size.includes("Personal")) {
     sizeOutput += 10;
   }
@@ -17,18 +17,15 @@ Order.prototype.addSize = function() {
     sizeOutput += 30;
   }
   else if (this.size.includes("Legacy Edition")) {
-    sizeOutput += 100;
-  }
-  else {
-    alert("Please put in desired size!");
-    $("p#pizzaResult").hide();
+    sizeOutput += 40;
   };
+
   this.sizeOutput = sizeOutput;
   console.log(sizeOutput);
 };
 
 Order.prototype.addToppings = function() {
-  var toppingsOutput = 10;
+  var toppingsOutput = 0;
   if (this.topping.includes("Pepperoni")) {
     toppingsOutput += 10;
   }
@@ -39,34 +36,28 @@ Order.prototype.addToppings = function() {
   toppingsOutput += 30;
   }
   else if (this.topping.includes("Legacy Edition")) {
-  toppingsOutput += 100;
-  }
-  else {
-    alert("Please put in desired topping!");
-    $("p#pizzaResult").hide();
-  };
+  toppingsOutput += 40;
+};
+
   this.toppingsOutput = toppingsOutput;
   console.log(toppingsOutput);
 };
 
 Order.prototype.addAge = function() {
-  var ageOutput = 10;
-  if (this.age <=18 && this.age >= 1) {
-    ageOutput -=5
+  var ageOutput = 0;
+  if (this.age <= 18 && this.age >= 1) {
+    ageOutput += 10;
   }
-  else if (this.age >18 && this.age <=50) {
-    ageOutput += 30
+  else if (this.age > 18 && this.age <=50) {
+    ageOutput += 20;
   }
-  else if (this.age >51 && this.age <=99) {
-    ageOutput += 35
+  else if (this.age > 51 && this.age <=99) {
+    ageOutput += 30;
   }
-  else if (this.age <=122) {
-    ageOutput +=100
-  }
-  else {
-    alert("Please put in your Age! (humans don't live passed 122)");
-    $("p#pizzaResult").hide();
+  else if (this.age <= 122) {
+    ageOutput += 40;
   };
+
   this.ageOutput = ageOutput;
   console.log(ageOutput);
 };
@@ -82,15 +73,15 @@ Order.prototype.pizzaPrice = function() {
 $(document).ready(function(){
   $("#pizzaInputs").submit(function(event){
     event.preventDefault();
-  var size = $("select#pizzaSize").val();
-  var topping = $("select#pizzaToppings").val();
-  var age = parseInt($("input#age").val());
-  var pizzaTotal = new Order(size, topping, age)
-  pizzaTotal.addSize();
-  pizzaTotal.addAge();
-  pizzaTotal.addToppings();
-  pizzaTotal.pizzaPrice();
-  $("p#pizzaResult").toggle();
-  $("span#output").text(""+ pizzaTotal.pizzaOutcome + "");
-  });
+    var size = $("select#pizzaSize").val();
+    var topping = $("select#pizzaToppings").val();
+    var age = parseInt($("input#age").val());
+    var pizzaTotal = new Order(size, topping, age)
+    pizzaTotal.addSize();
+    pizzaTotal.addAge();
+    pizzaTotal.addToppings();
+    pizzaTotal.pizzaPrice();
+    $("p#pizzaResult").show();
+    $("span#output").text(""+ pizzaTotal.pizzaOutcome + "");
+});
 });
