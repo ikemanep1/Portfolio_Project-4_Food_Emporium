@@ -6,7 +6,7 @@ function Order(size, topping, age) {
 }
 
 Order.prototype.addSize = function() {
-  var sizeOutput = 0;
+  var sizeOutput = 10;
   if (this.size.includes("Personal")) {
     sizeOutput += 10;
   }
@@ -21,14 +21,14 @@ Order.prototype.addSize = function() {
   }
   else {
     alert("Please put in desired size!");
-    $("p#pizzaResult").toggle();
+    $("p#pizzaResult").hide();
   };
   this.sizeOutput = sizeOutput;
   console.log(sizeOutput);
 };
 
 Order.prototype.addToppings = function() {
-  var toppingsOutput = 0;
+  var toppingsOutput = 10;
   if (this.topping.includes("Pepperoni")) {
     toppingsOutput += 10;
   }
@@ -43,14 +43,14 @@ Order.prototype.addToppings = function() {
   }
   else {
     alert("Please put in desired topping!");
-    $("p#pizzaResult").toggle();
+    $("p#pizzaResult").hide();
   };
   this.toppingsOutput = toppingsOutput;
   console.log(toppingsOutput);
 };
 
 Order.prototype.addAge = function() {
-  var ageOutput = 0;
+  var ageOutput = 10;
   if (this.age <=18 && this.age >= 1) {
     ageOutput -=5
   }
@@ -65,7 +65,7 @@ Order.prototype.addAge = function() {
   }
   else {
     alert("Please put in your Age! (humans don't live passed 122)");
-    $("p#pizzaResult").toggle();
+    $("p#pizzaResult").hide();
   };
   this.ageOutput = ageOutput;
   console.log(ageOutput);
@@ -90,7 +90,6 @@ $(document).ready(function(){
   pizzaTotal.addAge();
   pizzaTotal.addToppings();
   pizzaTotal.pizzaPrice();
-  $("p#pizzaResult").toggle();
   $("span#output").text(""+ pizzaTotal.pizzaOutcome + "");
   });
 });
