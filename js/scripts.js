@@ -90,6 +90,7 @@ $(document).ready(function(){
   pizzaTotal.addAge();
   pizzaTotal.addToppings();
   pizzaTotal.pizzaPrice();
+  $("p#pizzaResult").toggle();
   $("span#output").text(""+ pizzaTotal.pizzaOutcome + "");
   });
 });
