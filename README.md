@@ -22,8 +22,8 @@ _The alert for empty submissions will not fire, and there's still a ? icon in th
 # specs
 | Behavior        | Input           | Outcome  |
 | ------------- |:-------------:| -----:|
-| Customer inputs desired ingredients, size, and their age. | Front end collects data, and stores it according to constructor. | Back end calculates price for each modifier. |
-| User submits form. | Program Launches back end logic. | Front end displays result. |
+| The program will collect information based on what is selected. | "Size: Personal", "Toppings: Pepperoni", "Age: 21"| "Size: Personal", "Toppings: Pepperoni", "Age: 21" |
+| The Program will give a price based on the information it received. | "Size: Personal", "Toppings: Pepperoni", "Age: 21" | Price: 40$ |
 
 ### Support and contact details
 
