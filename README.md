@@ -17,7 +17,7 @@ _This is a place for ordering food. It contains options for pizza. The user will
 
 # Known Bugs
 
-_The alert for empty submissions will not fire, and there's still a ? icon in the URL._
+__
 
 # specs
 | Behavior        | Input           | Outcome  |
